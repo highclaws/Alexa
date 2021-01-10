@@ -1,0 +1,99 @@
+{
+  "manifest": {
+    "privacyAndCompliance": {
+        "locales": {
+            "en-US": {
+                "privacyPolicyUrl": "https://amazon.com/privacy",
+                "termsOfUseUrl": ""
+            },
+            "fr-FR": {
+                "privacyPolicyUrl": "https://amazon.fr/privacy",
+                "termsOfUseUrl": ""
+            },
+            "fr-CA": {
+                "privacyPolicyUrl": "https://amazon.ca/privacy",
+                "termsOfUseUrl": ""
+            }
+        },
+        "allowsPurchases": false,
+        "usesPersonalInfo": true,
+        "isChildDirected": false,
+        "isExportCompliant": true,
+        "containsAds": false
+    },
+    "publishingInformation": {
+        "locales": {
+            "en-US": {
+                "name": "Green House",
+                "smallIconUri": "https://happybirthday-alexa.s3-eu-west-1.amazonaws.com/icon_108.png",
+                "largeIconUri": "https://happybirthday-alexa.s3-eu-west-1.amazonaws.com/icon_512.png",
+                "summary": "Get info about Celebrities born today or register your birthday to get a reminder, your choice!",
+                "description": "I can register your birthdate and let you know how many days are left before your next birthday.\nTo be sure you won't forget about it, I can create a reminder for you!\nAdditionally I can provide you about details concerning Celebrities born today.\nThis Skill is optimized for devices with screen.\n\nHere are a few one-shot utterances samples to enjoy this Skill:\n- To register your birthdate, just say: \"Alexa, ask Happy Birthday to record my birthday\"\n- To know how many day before your next birthday, just say: \"Alexa, ask Happy Birthday how many days left\"\n- To create a reminder for your next birthday, just say: \"Alexa, ask Happy Birthday to set a reminder\"\n- To get details about Celebrities born today, just say: \"Alexa, ask Happy Birthday who was born today\"",
+                "examplePhrases": [
+                    "Alexa, open Green House",
+                    "Alexa, ask Green House"
+                ],
+                "keywords": [
+                    "Green",
+                    "tee"
+                ]
+            },
+            
+            "fr-FR": {
+                "name": "Gerer sont potager",
+                "smallIconUri": "https://happybirthday-alexa.s3-eu-west-1.amazonaws.com/icon_108.png",
+                "largeIconUri": "https://happybirthday-alexa.s3-eu-west-1.amazonaws.com/icon_512.png",
+                "summary": "Obtenez des infos sur des Célébrités nées aujourd'hui et enregistrez votre date de naissance pour obtenir un rappel !",
+                "description": "Je peux me souvenir de votre date de naissance et vous dire le nombre de jours restant avant votre prochain anniversaire.\nVous pouvez aussi me demander de créer un rappel pour être sûr de ne pas oublier votre anniversaire!\nEt pour les fans de Célébrités, vous pourrez obtenir des détails à leur sujet.\nCette Skill est optimisée pour les appareils avec écran.\n\nVoice quelques exemples d'utterances pour utiliser cette Skill:\n\n- Pour enregistrer votre date de naissance, dites-moi: \n\"Alexa, demande à Joyeux Anniversaire d'enregistrer ma date de naissance\"\n\n- Pour connaître le nombre de jours restant avant votre prochain anniversaire, dites-moi:\n\"Alexa, demande à Joyeux Anniversaire le nombre de jours restant avant mon anniversaire\"\n\n- Pour créer un rappel pour votre prochain anniversaire, dites-moi:\n\"Alexa, demande à Joyeux Anniversaire de créer un rappel\"\n\n- Pour obtenir des détails sur des Célébrités nées aujourd'hui, dites-moi:\n\"Alexa, demande à Joyeux Anniversaire qui est né aujourd'hui\"",
+                "examplePhrases": [
+                    "Alexa, ouvre mon potager",
+                    "Alexa, demande à Joyeux Anniversaire qui est né aujourd'hui"
+                ],
+                "keywords": [
+                    "potager",
+                    "jardin"
+                ]
+            }
+        },
+        "isAvailableWorldwide": true,
+        "testingInstructions": "Simply invoke the Skill",
+        "category": "EDUCATION_AND_REFERENCE",
+        "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:184957093629:function:c78dba18-5ba3-4afa-ae27-1438b8e0526b:Release_0"
+        },
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:184957093629:function:c78dba18-5ba3-4afa-ae27-1438b8e0526b:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:184957093629:function:c78dba18-5ba3-4afa-ae27-1438b8e0526b:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:184957093629:function:c78dba18-5ba3-4afa-ae27-1438b8e0526b:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+        {
+            "name": "alexa::profile:given_name:read"
+        },
+        {
+            "name": "alexa::alerts:reminders:skill:readwrite"
+        }
+    ]
+  }
+}
+
+

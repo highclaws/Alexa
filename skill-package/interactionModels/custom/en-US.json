@@ -1,0 +1,152 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "open my garden",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "HelloWorldIntent",
+                  "slots": [],
+                  "samples": [
+                      "bonjour",
+                      "coucou",
+                      "salut",
+                      "me dire bonjour"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "RegisterPotagerIntent",
+                  "slots": [
+                      {
+                          "name": "namePotager",
+                          "type": "AMAZON.SearchQuery"
+                      }
+                  ],
+                  "samples": [
+                      "save {namePotager}",
+                      "subscribe {namePotager}",
+                      "sign {namePotager}",
+                      "sign up {namePotager}",
+                      "il faut enregister {namePotager}",
+                      "the name is {namePotager}",
+                      "my garden is {namePotager}",
+                      "enregistre mon potager",
+                      "enregistre mon jardin"
+                  ]
+              },
+              {
+                  "name": "SayPotagerIntent",
+                  "slots": [],
+                  "samples": [
+                      "displays all the information about my vegetable garden",
+                      "tell me about my vegetable garden",
+                      "I want details on my vegetable garden"
+                  ]
+              },
+              {
+                  "name": "HumidityPotagerInt",
+                  "slots": [],
+                  "samples": [
+                      "give me the humidity of my vegetable garden today",
+                      "show me the humidity of my vegetable garden today",
+                      "show me the humidity of my vegetable garden",
+                      "give me the humidity of my vegetable garden",
+                      "humidity in my vegetable garden",
+                      "tell me the humidity of my vegetable garden today ",
+                      "how humid is my vegetable garden today",
+                      "can you tell me the humidity of the vegetable garden today",
+                      "tell me the humidity of my vegetable garden",
+                      "how humid is my vegetable garden",
+                      "you can tell me the humidity of the vegetable garden"
+                  ]
+              },
+              {
+                  "name": "TemperaturePotagerInt",
+                  "slots": [],
+                  "samples": [
+                    "vegetable garden temp poster",
+                    "displays the temperature of the vegetable garden",
+                    "vegetable garden temperature",
+                    "you can tell me the time of the vegetable garden",
+                    "give me the temperature of the vegetable garden",
+                    "give me the temperature of my vegetable garden",
+                    "give me the temperature of my vegetable garden today",
+                    "show me the temperature of my vegetable garden today",
+                    "you can tell me the temperature of the vegetable garden today",
+                    "you can tell me the temperature of the vegetable garden",
+                    "show me the temperature of the vegetable garden",
+                    "what is the temperature of the vegetable garden today",
+                    "displays the temperature of the vegetable garden",
+                    "show me the temperature",
+                    "what is the temperature of my vegetable garden",
+                    "tell me the temperature of my vegetable garden"
+                  ]
+              }
+          ],
+          "types": []
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "RegisterPotagerIntent",
+                  "delegationStrategy": "ALWAYS",
+                  "confirmationRequired": true,
+                  "prompts": {
+                      "confirmation": "Confirm.Intent.1437932912555"
+                  },
+                  "slots": [
+                      {
+                          "name": "namePotager",
+                          "type": "AMAZON.SearchQuery",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.1271001172532.1576156040408"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+      },
+      "prompts": [
+          {
+              "id": "Elicit.Slot.1271001172532.1576156040408",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "what is the name of your vegetable garden ?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "what is the name of your vegetable garden ?"
+                  }
+              ]
+          },
+          {
+              "id": "Confirm.Intent.1437932912555",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "The name of the garden is  {namePotager} ?"
+                  }
+              ]
+          }
+      ]
+  }
+}

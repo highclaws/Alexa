@@ -1,0 +1,155 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ouvre mon potager",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "bonjour",
+                        "coucou",
+                        "salut",
+                        "me dire bonjour"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RegisterPotagerIntent",
+                    "slots": [
+                        {
+                            "name": "namePotager",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "sauvegarde {namePotager}",
+                        "enregistre {namePotager}",
+                        "subscribe {namePotager}",
+                        "sign {namePotager}",
+                        "sign up {namePotager}",
+                        "il faut enregister {namePotager}",
+                        "le nom de mon potager que j'enregiste {namePotager}",
+                        "mon potager c'est {namePotager}",
+                        "le {namePotager} du mois  ",
+                        "le  {namePotager} de l'année  ",
+                        "enregistre mon potager",
+                        "enregistre mon jardin"
+                    ]
+                },
+                {
+                    "name": "SayPotagerIntent",
+                    "slots": [],
+                    "samples": [
+                        "affiche tout les informations de mon potager",
+                        "détaille moi mon potager",
+                        "je veux des details sur mon potager"
+                    ]
+                },
+                {
+                    "name": "HumidityPotagerInt",
+                    "slots": [],
+                    "samples": [
+                        "donne moi l'humidité de mon potager aujourd'hui",
+                        "affiche moi l'humidité de mon potager aujourd'hui",
+                        "affiche moi l'humidité de mon potager",
+                        "donne moi l'humidité de mon potager",
+                        "humidité de mon potager",
+                        "dit moi l'humidité de mon potager aujourd'hui ",
+                        "quelle est l'humidité de mon potager aujourd'hui",
+                        "tu peu me dire l'humidité du potager aujourd'hui",
+                        "dit moi l'humidité de mon potager",
+                        "quelle est l'humidité de mon potager",
+                        "tu peu me dire l'humidité du potager"
+                    ]
+                },
+                {
+                    "name": "TemperaturePotagerInt",
+                    "slots": [],
+                    "samples": [
+                        "affiche temp du potager",
+                        "affiche temperature du potager",
+                        "temperature du potager",
+                        "tu peu me dire la temp du potager",
+                        "donne moi la temperature du potager ",
+                        "donne moi la temperature de mon potager",
+                        "donne moi la temperature de mon potager aujourd'hui",
+                        "affiche moi la temperature de mon potager aujourd'hui",
+                        "tu peu me dire la temperature du potager aujourd'hui",
+                        "tu peu me dire la temperature du potager",
+                        "affiche moi la temperature du potager",
+                        "c'est quoi la temparature du potager aujourd'hui",
+                        "affiche  la temparature du potager",
+                        "affiche moi la temperature",
+                        "quelle est la temperature de mon potager",
+                        "dit moi la temperature de mon potager"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RegisterPotagerIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1437932912555"
+                    },
+                    "slots": [
+                        {
+                            "name": "namePotager",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1271001172532.1576156040408"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "SKILL_RESPONSE"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1271001172532.1576156040408",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "c'est quoi le nom de votre potager ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "quelle est le nom de votre potager ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1437932912555",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "le nom du potager est bien {namePotager} ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
